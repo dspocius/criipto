@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div(class="text-center")
+    h1 Criipto Verify log in tester
+    p Choose your login. Test users you get 
+      a(href="http://docs.criipto.com/how-to/test-users.md") from here.
+    form(name="criiptoForm", method="post", action="/criipto/login")
+      div
+        select(name="loginmethod")
+          option(value="urn:grn:authn:no:bankid:mobile") Norwegian BankID Mobile
+          option(value="urn:grn:authn:no:bankid:central") Norwegian Hardware token (kodebrikke)
+          option(value="urn:grn:authn:se:bankid:same-device") Swedish BankID same device
+          option(value="urn:grn:authn:se:bankid:another-device") Swedish BankID another device
+          option(value="urn:grn:authn:dk:nemid:poces") Danish NemID personal with code card
+          option(value="urn:grn:authn:dk:nemid:moces") Danish NemID employee with code card
+          option(value="urn:grn:authn:dk:nemid:moces:codefile") Danish NemID employee with code file
+          option(value="urn:grn:authn:fi:tupas") Finnish BankID
+          option(value="urn:grn:authn:fi:mobile-id") Finnish Mobile Certificate
+          option(value="urn:grn:authn:fi:all") Choose from all Finnish options
+      br
+      div.actions
+       input(type="submit", value="Login")
