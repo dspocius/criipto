@@ -6,6 +6,13 @@ We assume that you already done two steps in Criipto side:
 1. Register your application in Criipto Verify [a link](https://docs.criipto.com/authentication/aspnetcore/#register)
 2. Configure your OAuth2 flow [a link](https://docs.criipto.com/authentication/aspnetcore/#flow)
 
+## Quick Start
+
+1. Just clone or download ZIP file (and extract it to projects folder) of this github.
+2. Go to projects directory with terminal.
+3. Run: npm install
+4. Run: npm start or node bin/www
+
 ## Preparation
 Four steps are required to complete your first test login:
 1. Generate express project [a link](https://expressjs.com/en/starter/generator.html) (Optional)
