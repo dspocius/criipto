@@ -42,9 +42,9 @@ app.use(session(sessionData));
 
 //Every route after the auth() middleware gets authentication info or requires authentication if required is set to true
 app.use(auth({
-  //authorizationParams: {
-  //	response_type: "code"
-  //},
+  authorizationParams: {
+  	response_type: "code"
+  },
   // The next to settings must match the Callback URLs in Criipto Verify
   redirectUriPath: "/callback",
   logoutPath: "/signout",
@@ -53,7 +53,7 @@ app.use(auth({
   issuerBaseURL: criiptoConfig.Domain,
   baseURL: criiptoConfig.BaseUrl,
   clientID: criiptoConfig.clientID,
-  //clientSecret: criiptoConfig.ClientSecret // need for response_type: "code"
+  clientSecret: criiptoConfig.ClientSecret // need for response_type: "code"
 }));
 
 app.use('/', indexRouter);
