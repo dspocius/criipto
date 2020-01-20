@@ -45,7 +45,7 @@ app.use(auth({
   authorizationParams: {
   	response_type: "code"
   },
-  // The next to settings must match the Callback URLs in Criipto Verify
+  // The next to settings must match the Callback URLs in Criipto Verify - by default libraries path is "callback"
   redirectUriPath: "/callback",
   logoutPath: "/signout",
   routes: false,
@@ -58,7 +58,7 @@ app.use(auth({
 
 app.use('/', indexRouter);
 app.use('/criipto', criiptoLogin);
-app.use('/callback', requiresAuth(), criiptoConnected); // requiresAuth() protects this view from unauthorized access
+app.use('/connected', requiresAuth(), criiptoConnected); // requiresAuth() protects this view from unauthorized access
 
 /*  ---------------------------------------------------  */
 
